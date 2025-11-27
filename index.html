@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akifulla Khan - Portfolio</title>
+<link rel="icon" href="akif1.jpg" type="image/png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- =======================
+   Navbar
+======================= -->
+<header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- =======================
+   Hero Section
+======================= -->
+<section class="hero" id="home">
+  <div class="hero-content glass">
+    <h1>Hello, I'm Akifulla Khan</h1>
+    <p>Passionate engineer & front-end developer. I design & code beautifully simple things.</p>
+    <img src="akif1.jpg" id="image_logo" alt="Akifulla Khan">
+  </div>
+</section>
+
+<!-- =======================
+   About / Education Section
+======================= -->
+<section class="education" id="about">
+  <h2>Education</h2>
+  <div class="education-card glass">
+    <h3>Bachelor of Engineering in Information Science & Engineering</h3>
+    <p style="color: red; font-weight: bold;">2022-2026 | VTU University</p>
+    <p> Maintained 8 CGPA.</p>
+    <!-- <ul>
+      <li></li>
+      <li></li>
+    </ul> -->
+  </div>
+</section>
+
+<!-- =======================
+   Tech Stack / Projects
+======================= -->
+<section class="tech_stack" id="projects">
+  <h2>My Tech Stack</h2>
+  <div class="cards-container">
+    <div class="cards glass">
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/013/313/458/small_2x/html-icon-3d-rendering-illustration-free-vector.jpg" alt="HTML5">
+      <h3>HTML5</h3>
+      <p>Intermediate</p>
+    </div>
+    <div class="cards glass">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrxhwg_X-XpKv5p4iXbwtEoUlkqQAkzJ1zsKqShwZkNhAkFcahVitQ8ydOKpGfbYCjshg&usqp=CAU" alt="CSS3">
+      <h3>CSS3</h3>
+      <p>Intermediate</p>
+    </div>
+    <div class="cards glass">
+      <img src="https://upload.wikimedia.org/wikipedia/it/2/2e/Java_Logo.svg" alt="Java">
+      <h3>Java</h3>
+      <p>Intermediate</p>
+    </div>
+    <div class="cards glass">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="C">
+      <h3>C</h3>
+      <p>Intermediate</p>
+    </div>
+    <div class="cards glass">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++">
+      <h3>C++</h3>
+      <p>Intermediate</p>
+    </div>
+    <div class="cards glass">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+      <h3>Python</h3>
+      <p>Intermediate</p>
+    </div>
+  </div>
+</section>
+
+<!-- =======================
+   Contact Section
+======================= -->
+<section class="contact" id="contact">
+  <h2>Get In Touch</h2>
+  <div class="contact-info glass">
+    <p>Email: <a href="mailto:akifullakhan82@gmail.com">akifullakhan82@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/akifulla-khan-6744ab253/" target="_blank">Connect with me</a></p>
+    <p>Location: Isaqi Mohalla Kirugavalu, Malavalli TQ, Mandya Dist, Karnataka 571424</p>
+  </div>
+</section>
+
+<!-- =======================
+   Footer
+======================= -->
+<footer>
+  <div class="glass footer-content">
+    <h3>Akifulla Khan</h3>
+    <p>Engineering Student</p>
+    <p>&copy; 2025 All Rights Reserved</p>
+  </div>
+</footer>
+
+<!-- =======================
+   JS Scroll Animation
+======================= -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll('.glass');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else if (entry.intersectionRatio < 0.3) { 
+          // Remove 'show' when less than 30% visible
+          entry.target.classList.remove('show');
+        }
+      });
+    },
+    {
+      threshold: [0, 0.3, 1] // multiple thresholds
+    }
+  );
+
+  elements.forEach(el => observer.observe(el));
+});
+
+</script>
+
+</body>
+</html>
