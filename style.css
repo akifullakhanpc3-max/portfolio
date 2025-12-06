@@ -128,7 +128,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     justify-items: center;
     gap: 2rem;
-    margin: 4rem 0;
+    margin: 4rem 4rem;
 }
 .cards, .project-card {
     width: 100%;
