@@ -1,1 +1,1 @@
-link -- akifullakhanportfolio.vercel.app
+link -- https://akifullakhanportfolio.vercel.app
