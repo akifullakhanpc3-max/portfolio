@@ -17,7 +17,7 @@
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#projects">Tech Stack</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -41,61 +41,81 @@
   <h2>Education</h2>
   <div class="education-card glass">
     <h3>Bachelor of Engineering in Information Science & Engineering</h3>
-    <p style="color: red; font-weight: bold;">2022-2026 | VTU University</p>
-    <p> Maintained 8 CGPA.</p>
-    <!-- <ul>
-      <li></li>
-      <li></li>
-    </ul> -->
+    <p style="color:red;font-weight:bold;">2022-2026 | VTU University</p>
+    <p>Maintained 8 CGPA.</p>
   </div>
 </section>
 
 <!-- =======================
-   Tech Stack / Projects
+   Tech Stack
 ======================= -->
 <section class="tech_stack" id="projects">
   <h2>My Tech Stack</h2>
+
   <div class="cards-container">
+
     <div class="cards glass">
-      <img src="https://static.vecteezy.com/system/resources/thumbnails/013/313/458/small_2x/html-icon-3d-rendering-illustration-free-vector.jpg" alt="HTML5">
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/013/313/458/small_2x/html-icon-3d-rendering-illustration-free-vector.jpg">
       <h3>HTML5</h3>
       <p>Intermediate</p>
     </div>
+
     <div class="cards glass">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrxhwg_X-XpKv5p4iXbwtEoUlkqQAkzJ1zsKqShwZkNhAkFcahVitQ8ydOKpGfbYCjshg&usqp=CAU" alt="CSS3">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrxhwg_X-XpKv5p4iXbwtEoUlkqQAkzJ1zsKqShwZkNhAkFcahVitQ8ydOKpGfbYCjshg&usqp=CAU">
       <h3>CSS3</h3>
       <p>Intermediate</p>
     </div>
+
     <div class="cards glass">
-      <img src="https://upload.wikimedia.org/wikipedia/it/2/2e/Java_Logo.svg" alt="Java">
+      <img src="https://upload.wikimedia.org/wikipedia/it/2/2e/Java_Logo.svg">
       <h3>Java</h3>
       <p>Intermediate</p>
     </div>
+
     <div class="cards glass">
-      <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="Java">
-      <h3>Java Scripts</h3>
+      <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png">
+      <h3>JavaScript</h3>
       <p>Intermediate</p>
     </div>
+
     <div class="cards glass">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="C">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png">
       <h3>C</h3>
       <p>Intermediate</p>
     </div>
+
     <div class="cards glass">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg">
       <h3>C++</h3>
       <p>Intermediate</p>
     </div>
+
     <div class="cards glass">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg">
       <h3>Python</h3>
       <p>Intermediate</p>
     </div>
+
     <div class="cards glass">
-      <img src="   https://cdn-icons-png.flaticon.com/512/875/875209.png " alt="React">
-      <h3>React Js</h3>
+      <img src="https://cdn-icons-png.flaticon.com/512/875/875209.png">
+      <h3>React JS</h3>
       <p>Intermediate</p>
     </div>
+
+    <!-- SQL -->
+    <div class="cards glass">
+      <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png">
+      <h3>SQL</h3>
+      <p>Intermediate</p>
+    </div>
+
+    <!-- MongoDB -->
+    <div class="cards glass">
+      <img src="https://cdn.iconscout.com/icon/free/png-256/free-mongodb-5-1175140.png">
+      <h3>MongoDB</h3>
+      <p>Intermediate</p>
+    </div>
+
   </div>
 </section>
 
@@ -119,34 +139,39 @@
     <h3>Akifulla Khan</h3>
     <p>Engineering Student</p>
     <p>&copy; 2025 All Rights Reserved</p>
-     <p>This is a personal portfolio. It does not collect passwords or download files.</p>
+    <p>This is a personal portfolio. It does not collect passwords or download files.</p>
   </div>
 </footer>
 
 <!-- =======================
-   JS Scroll Animation
+   Scroll Animation JS
 ======================= -->
 <script>
+
 document.addEventListener("DOMContentLoaded", () => {
+
   const elements = document.querySelectorAll('.glass');
 
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        } else if (entry.intersectionRatio < 0.3) { 
-          // Remove 'show' when less than 30% visible
-          entry.target.classList.remove('show');
-        }
-      });
-    },
-    {
-      threshold: [0, 0.3, 1] // multiple thresholds
-    }
-  );
+  const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      }
+
+      else if(entry.intersectionRatio < 0.3){
+        entry.target.classList.remove('show');
+      }
+
+    });
+
+  },{
+    threshold:[0,0.3,1]
+  });
 
   elements.forEach(el => observer.observe(el));
+
 });
 
 </script>
